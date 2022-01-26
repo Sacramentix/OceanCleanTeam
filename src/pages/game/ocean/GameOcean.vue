@@ -1,9 +1,9 @@
 <script setup lang="ts">
 
-import { BottleFactory } from '../../../store/Ocean/trash/factory/BottleFactory';
+import { BottleFactory } from '../../../store/ocean/trash/factory/BottleFactory';
 import { StyleValue } from 'vue';
-import { trash } from '../../../store/Ocean/state';
-import { Plastic } from '../../../store/Ocean/trash/plastic';
+import { trash } from '../../../store/ocean/state';
+import { Plastic } from '../../../store/ocean/trash/plastic';
 import { isGameFinish } from '../../../store/game/state';
 
 var lastFrame = 0;
