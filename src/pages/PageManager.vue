@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, defineAsyncComponent, ref, watch } from 'vue';
-import { currentPage, Pages } from '../store/PageManager';
+import { currentPage, Pages } from '../store/pageManager';
 
 // const page = ref(defineAsyncComponent(()=>import("./GameMenu.vue")))
 const page = computed(() => {

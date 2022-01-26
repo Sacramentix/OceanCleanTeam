@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import GameMenuBackground from '../components/GameMenuBackground.vue';
-import { currentPage } from '../store/PageManager';
-import { Pages } from '../store/PageManager';
+import { currentPage } from '../store/pageManager';
+import { Pages } from '../store/pageManager';
 function play() {
     currentPage.value = Pages.Game;
     alert("play")
