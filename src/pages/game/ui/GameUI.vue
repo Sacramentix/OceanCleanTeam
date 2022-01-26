@@ -1,16 +1,33 @@
 <script setup lang="ts">
+import { onUnmounted } from 'vue';
 import { isGameFinish } from '../../../store/game/state';
-import { currentPage, Pages } from '../../../store/PageManager';
-import { Player, player, playerReset } from '../../../store/player/class';
+import { currentPage, Pages } from '../../../store/pageManager';
+import { IObserver, player, playerReset } from '../../../store/player/class';
+
 function gotoMenu() {
     isGameFinish.value = false;
     playerReset();
     currentPage.value = Pages.Menu;
 }
+
+/**
+ * This observer is just to add another design patterns. Vue can handle this kind of stuff this ref.
+ */
+class PlayerMoneyObserver implements IObserver {
+    update(): void {
+        document.getElementById("player-money").innerHTML = player.money.value + "$";
+    }
+}
+const o = new PlayerMoneyObserver();
+player.subscribe(o);
+onUnmounted(() => {
+    player.unsubscribe(o);
+});
+
 </script>
 <template>
     <div gameUI>
-        <p>{{ player.money }}$</p>
+        <p id="player-money"></p>
         <div result v-if="isGameFinish">
             <h2>You raised</h2>
             <p>{{ player.money }}$</p>
