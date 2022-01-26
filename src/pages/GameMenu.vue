@@ -4,7 +4,6 @@ import { currentPage } from '../store/pageManager';
 import { Pages } from '../store/pageManager';
 function play() {
     currentPage.value = Pages.Game;
-    alert("play")
 }
 
 </script>

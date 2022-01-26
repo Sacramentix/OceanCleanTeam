@@ -42,7 +42,6 @@ function update(dt: number) {
 function finish() {
     trash.value = []
     isGameFinish.value = true;
-    alert("FINISH !!!")
 }
 
 function position(p: Plastic): StyleValue {
