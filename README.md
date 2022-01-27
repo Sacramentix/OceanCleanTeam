@@ -36,3 +36,10 @@ cd OceanCleanTeam
 - Run this command
 ```npm run serve```
 
+## Todo
+
+- Tutoriel
+- music and sound
+- background for the game page
+
+
