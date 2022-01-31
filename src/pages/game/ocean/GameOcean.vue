@@ -128,9 +128,8 @@ start();
         opacity: 0.5;
         >img {
             height: 5vmin;
-            width: 5vmin;
+            width: auto;
             object-fit: contain;
-            outline: 1px solid red;
         }
     }
 
